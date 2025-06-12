@@ -1,0 +1,52 @@
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>viagem da piscina</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="namorada.css">
+</head>
+        
+<body class="bg-gradient-to-br from-red-600 to-white-700 text-white min-h-screen flex flex-col">
+      <video autoplay muted loop id="video-bg">
+        <source src="video.mp4" type="video/mp4"/>
+      </video>
+
+      <div id="porra" class="float">
+       <center><div class="card-foto">
+      <button id="surpriseBtn"><img src="fotos/video 3.2.jpg" class="w-60 h-100 object-cover" />
+        </button>
+    </div></center> 
+    </div>
+
+
+    <center><div id="message" class="mt-8 hidden text-center text-xl max-w-7xl italic font-bold bg-white text-red-800 p-6 rounded-xl shadow-lg">
+     <p>NOSSA, esse dia foi foda, a gente passou um tempinho bom no carro indo até o lugar lá, ouvimos o álbum "rosie" da rose lá, tiramos fotos, foi daora.</p>
+<p>Eu gosto muito de dias de piscina com vc, a gente brinca horrores na água, é muito legal, e a piscina lá era gigantesca, a comida de lá era boa, adoro comer com vc tbm.
+</p>NOSSA VDD, teve a gente conhece do os animais lá, o pavão bonitão, as galinhas, coelhos, os cavalinhos, PÔNEIS, foi muito muito zika, tenho saudades de viajar com vc, aff.
+A gente também viu os vídeos do canal do meu primo, oq foi muito engraçado. Esse dia teve muitas coisas boas.
+<p>Obrigado por fazer os dias de piscina super mais legais.</p>
+    <script>
+    const btn = document.getElementById("surpriseBtn");
+    const msg = document.getElementById("message");
+
+    function createHeart() {
+      const heart = document.createElement("div");
+      heart.classList.add("heart");
+      heart.textContent = "❤️";
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.bottom = "0";
+      heart.style.animationDuration = (Math.random() * 3 + 2) + "s";
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 5000);
+    }
+
+    function startHearts() {
+      setInterval(createHeart, 400);
+    }
+
+    btn.addEventListener("click", () => {
+      msg.classList.remove("hidden");
+      startHearts();
+    });
+  </script>

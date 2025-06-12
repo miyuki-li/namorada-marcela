@@ -1,0 +1,56 @@
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>virada do ano</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="namorada.css">
+</head>
+        
+<body class="bg-gradient-to-br from-red-600 to-white-700 text-white min-h-screen flex flex-col">
+      <video autoplay muted loop id="video-bg">
+        <source src="video.mp4" type="video/mp4"/>
+      </video>
+
+      <div id="porra" class="float">
+       <center><div class="card-foto">
+      <button id="surpriseBtn"><img src="fotos/video 1.2.jpg" class="w-60 h-100 object-cover" />
+        </button>
+    </div></center> 
+    </div>
+
+
+    <center><div id="message" class="mt-8 hidden text-center text-xl max-w-7xl italic font-bold bg-white text-red-800 p-6 rounded-xl shadow-lg">
+      <p>Primeiro dia do ano/virada</p>
+      Essa foi a segunda vez que a gente passou a virada do ano juntos, e assim, foi muito especial, td bem que da primeira vez a gente chorou junto e viajamos juntos e tudo mais, mas
+      releva isso, o importante é essa vez. Esses dias foram muito bons, foi muito legal estar junto da sua família durante a virada e participar das brincadeiras que eles fazem. A minha
+      família não constuma fazer brincadeiras tão elaboradas assim na virada do ano, eu nunca pensaria em participar de um bingo, isso foi genial. <p>Enfim, foi muito foda e mágico, é um
+      momento muito importante, e passar por ele estando com alguem que vc ama muito, literalmente a pessoa mais importante pra mim, significa dms dms. Começar o ano estanado do lado de quem vc
+      mais ama, simboliza que vamos passar o resto do ano e de todos os anos e da vida inteira juntos grudados em todos os momentos, sendo eles importantes ou não, o importante é sempre estarmos juntos...
+      E sempre estaremos......... vc gostando ou não......... (te amo).
+      </p>
+      <p>Obrigado por estar do meu lado no primeiro dia do ano e no resto do ano</p>
+    <script>
+    const btn = document.getElementById("surpriseBtn");
+    const msg = document.getElementById("message");
+
+    function createHeart() {
+      const heart = document.createElement("div");
+      heart.classList.add("heart");
+      heart.textContent = "❤️";
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.bottom = "0";
+      heart.style.animationDuration = (Math.random() * 3 + 2) + "s";
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 5000);
+    }
+
+    function startHearts() {
+      setInterval(createHeart, 400);
+    }
+
+    btn.addEventListener("click", () => {
+      msg.classList.remove("hidden");
+      startHearts();
+    });
+  </script>

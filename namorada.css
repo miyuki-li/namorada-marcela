@@ -1,0 +1,65 @@
+#video-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.heart {
+  position: fixed;
+  font-size: 30px;
+  color: white;
+  animation: floatHearts 5s linear forwards;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+@keyframes floatHearts {
+  0% {
+    transform: translateY(100vh) scale(0.5);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-10vh) scale(1.5);
+    opacity: 0;
+  }
+}
+
+.card-foto {
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  
+}
+
+.card-foto:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(143, 31, 31, 0.842);
+}
+#porra{
+    display: flex;
+    justify-content: center;
+    margin-top: 100;
+}
+#message{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+/* Float Animation: Makes the element float up and down, perfect for simulating a balloon effect. */
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+.float {
+  animation: float 1.5s infinite;
+}
+.container{
+  display: flex;
+}
+img{
+  width: 200px;
+}

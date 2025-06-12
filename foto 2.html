@@ -1,0 +1,58 @@
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>dia de bebedeira</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="namorada.css">
+</head>
+        
+<body class="bg-gradient-to-br from-red-600 to-white-700 text-white min-h-screen flex flex-col">
+      <video autoplay muted loop id="video-bg">
+        <source src="video.mp4" type="video/mp4"/>
+      </video>
+
+      <div id="porra" class="float">
+       <center><div class="card-foto">
+      <button id="surpriseBtn"><img src="fotos/foto 8.2.jpg" class="w-60 h-100 object-cover" />
+        </button>
+    </div></center> 
+    </div>
+
+
+    <center><div id="message" class="mt-8 hidden text-center text-xl max-w-7xl italic font-bold bg-white text-red-800 p-6 rounded-xl shadow-lg">
+      <p>O dia que a gente se embebedou</p>
+      <p>........... Esse dia......... Que dia bom, meu deus, eu lembro até hoje desse dia com alegria, pq eu me diverti tanto. Essa foi a primeira vez que eu bebi na vida, e eu fico muito feliz de ter sido com vc, e só vc.
+      </p><p>Nesse dia aconteceu tanta coisa maluca, teve bebida derrubada em mim que me manchou todo, teve safadezas dms, mas principalmente, muitas risadas e felicidade. Era seu presente de aniversário, então TINHA que ser foda, 
+        e foi, muito foda (pelo menos pra mim, n sei pra vc), eu senti coisas que nuca tinha sentido antes, e n foi só a sensação de estar bêbado, mas eu tbm percebi que te amo de verdade e que qlqr situação vai ficar boa se eu
+        estiver com vc, a gente sempre da um jeito de se divertir e achar graça qnd estamos juntos.</p>
+        <p>É muito engraçado lembrar da gente indo junto pro shopping estando doidos de bêbados, E ENCONTRANDO AQLS MLK, tendo que fingir estar sóbrio conversando com eles, a gente ganhou um bombom pelo menos. E tbm teve AQUILO.....
+          Que a gente não fala.......        </p>
+          <p>Apesar desse GRANDE pesar, esse dia foi um dos melhores dias da minha vida, eu acho, foi realmente muito foda, e eu queria repetir dias assim, de ficarmos doidos de beudos só eu e vc, e jogar algumas paradas juntos, mas
+            é difícil dms. Mas o bom é que esse dia ja aconteceu, e vamos sempre nos lembrar dele.
+          </p>
+          <p>Obrigado por me fazer topar essas suas doideras.</p>
+    <script>
+    const btn = document.getElementById("surpriseBtn");
+    const msg = document.getElementById("message");
+
+    function createHeart() {
+      const heart = document.createElement("div");
+      heart.classList.add("heart");
+      heart.textContent = "❤️";
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.bottom = "0";
+      heart.style.animationDuration = (Math.random() * 3 + 2) + "s";
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 5000);
+    }
+
+    function startHearts() {
+      setInterval(createHeart, 400);
+    }
+
+    btn.addEventListener("click", () => {
+      msg.classList.remove("hidden");
+      startHearts();
+    });
+  </script>

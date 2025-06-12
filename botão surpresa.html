@@ -1,0 +1,75 @@
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>nois</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="namorada.css">
+</head>
+        
+<body class="bg-gradient-to-br from-red-600 to-white-700 text-white min-h-screen flex flex-col">
+      <video autoplay muted loop id="video-bg">
+        <source src="video.mp4" type="video/mp4"/>
+      </video>
+
+      <div id="porra" class="float">
+       <center><div class="card-foto">
+      <button id="surpriseBtn"><video autoplay muted="false" loop src="pedido namoro.mp4" class="w-full h-64 object-cover" /><source src="pedido de namoro.mp4" type="pedodp de namoro/mp4">
+        </button>
+    </div></center> 
+    </div>
+
+
+    <center><div id="message" class="mt-8 hidden text-center text-xl max-w-7xl italic font-bold bg-white text-red-800 p-6 rounded-xl shadow-lg">
+      <p>Difícil encontrar um jeito pra começar a falar sobre isso.</p>
+      <p>Vamo lá, Eu te amo. Isso é inegável. Meu deus, esse dia foi com certeza o dia que eu recebi a melhor resposta da minha vida, eu não me arrependo nem um pouco de te pedir em namoro, de te namorar, de não desistir de vc mesmo depois de tudo ter acontecido, 
+        eu percebo agora que essa foi a melhor decisão possível, eu não consigo imaginar minha vida sem você (na real eu nem tento muito), eu não quero imaginar minha vida sem você, vc ta atrelada a mim pro resto da sua vida, ja era.
+      </p>
+      <p>Namorar com você é uma aventura constante, uma grande montanha russa, tem suas descidas mas também tem as suas subidas. Eu nunca sei direito o que vc vai fazer pq vc é muito maluca e imprevisível, mas as vezes isso é bom, mas as vezes não. Mas eu acredito que valha a pena passar por essas coisas
+        "ruins", pq as coisas boas que o nosso namoro me trás são muito superiores e recompensadoras.
+      </p>
+      <p>Você me perguntou esses dias o que eu mais gosto em você, bom, o que eu mais gosto em você é o seu amor e sua forma de demonstrar ele, vc tem um amor incondicionalmente grande aí dentro do seu coração e vc sempre quer achar maneiras novas e diferentes de demonstrá-lo
+        para que as pessoas que você ama entendam o tamanho do seu amor. Eu sei que as vezes eu não entendo as suas demonstrações, por serem diferentes da minha maneira de demonstrar, mas eu adoro que vc sempre se esforça MUITO pra achar maneiras diferentes de mostrar seu amor.
+        Você sempre se preocupa muito se a pessoa vai gostar mesmo do que vc ta fazendo, se vai ser bom o suficiente, se ta tudo perfeito, mas, assim, sempre estánmm (esse nmm foi a maya), vc sempre arrasa e sempre ta tudo muito bom, porra, se vc cagar na mão e me der de presente
+        com uma cartinha ou só falar que me ama eu choro de alegria, mesma coisa das outras pessoas, lelo, dorys, enfim, eu acho que vc se preocupa de mais com os detalhes pequenos e nunca acha que ta bom o suficiente, e eu amo isso em você pq mostra o quão vc se importa com as pessoas
+        que você ama.
+      </p>
+      <p>Cada dia ao seu lado é uma alegria diferente, seja sendo feliz mesmo, seja de ser engraçado, mas sempre tem alguma alegria, eu também amo isso, sua companhia, também é uma das coisas que eu mais amo em você. eu amo fazer coisas com você, sair, ficar em casa, conversar, entrar em call, tanto faz, qualquer coisa 
+        que seja com você ja está ótimo, de vdd, tanto que as vezes eu nem fico matutando sobre o que vamos fazer quando sairmos, eu só quero sair com vc e estar com você, já é um dia maravilhoso se eu ficasse só olhando pra sua cara e vc sorrindo olhando pra mim de volta.
+      </p>
+      <p>Eu to ficando com preguiça de continuar escrevendo isso, então vou terminar esse texto logo.</p>
+      <p>Obrigado por sempre se preocupar muito com todos os detalhes mínimos e se importar tanto em achar maneiras de demonstrar seu amor.</p>
+      <p>Obrigado por compartilhar sua companhia incrível comigo.</p>
+      <p>Obrigado por sempre estar comigo, ao menos tentar estar sempre comigo quando eu preciso, eu sei que sou difícil, mas vc tenta.</p>
+      <p>Obrigado por ser tão linda assim, fico bobo.</p>
+      <p>Obrigado por ser tão maravilhosa.</p>
+      <p>Obrigado por ser tão carinhosa e atenciosa.</p>
+      <p>Obrigado por ser chata.</p>
+      <p>Obrigado por fazer meus dias muito melhores.</p>
+      <p>Obrigado por fazer a minha vida uma montanha russa.</p><br>
+      
+      <p>Obrigado por ser você.</p>
+    <script>
+    const btn = document.getElementById("surpriseBtn");
+    const msg = document.getElementById("message");
+
+    function createHeart() {
+      const heart = document.createElement("div");
+      heart.classList.add("heart");
+      heart.textContent = "❤️";
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.bottom = "0";
+      heart.style.animationDuration = (Math.random() * 3 + 2) + "s";
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 5000);
+    }
+
+    function startHearts() {
+      setInterval(createHeart, 400);
+    }
+
+    btn.addEventListener("click", () => {
+      msg.classList.remove("hidden");
+      startHearts();
+    });
+  </script>

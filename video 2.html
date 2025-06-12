@@ -1,0 +1,60 @@
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>dia de amores na minha casa</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="namorada.css">
+</head>
+        
+<body class="bg-gradient-to-br from-red-600 to-white-700 text-white min-h-screen flex flex-col">
+      <video autoplay muted loop id="video-bg">
+        <source src="video.mp4" type="video/mp4"/>
+      </video>
+
+      <div id="porra" class="float">
+       <center><div class="card-foto">
+      <button id="surpriseBtn"><img src="fotos/video 4.1.jpg" class="w-60 h-100 object-cover" />
+        </button>
+    </div></center> 
+    </div>
+
+
+    <center><div id="message" class="mt-8 hidden text-center text-xl max-w-7xl italic font-bold bg-white text-red-800 p-6 rounded-xl shadow-lg">
+      <p>Esse dia foi muito foda, se eu n me engano, foi o dia em q vc pintou o cabelo de preto antes de vir pra minha casa, foi uma surpresa muito grande, pq eu sempre achei q 
+      vc n ia ficar legal de cabelo preto, mas quando eu te vi, eu me surpreendi muito, vc tava muito linda.</p>
+      <p>Lembro que quando vc chegou aq em casa (tarde ja), a gente ficou grudadinho grudadinho, a gente n tava namorando ainda, mas claramente estavamos querendo muito, mas isso n foi uma barreira
+        pra gente, ficamos de grudinho e se pegando o tempo todo, foi muito legal, teve aquele video gigante que a gente gravou na cozinha enquanto colocávamos comida, tiramos várias fotinhos e gravamos vídeos.
+        Eu estava em paz nesse dia, uma paz que eu já não sentia a bastante tempo até, eram várias fita passando naa minha cabeça durante o tempo que a gente n namorava. Mas nesse dia, eu percebi que valeu a pena
+        e que a gente realmente foi feito pra ficar junto e n tem jeito.
+      </p>
+      <p>Foi depois desse dia que eu tive a certeza de que iria ir fundo na ideia de te reconquistar, tanto que até te perguntei no outro dia na escola se oq rolou na minha casa ia mudar alguma coisa entre nós, pq
+        eu sabia q ia mudar, mas perguntei pra ver se vc sabia disso e se tava de acordo, mas vc disse que achava que não, aiai, bocó.
+      </p>
+      <p>No final, quando estávamos nos despedindo vc deixou escapar um "eu te amo", e foi tão genuíno que eu tive a minha confirmação imediatamente, foi isso em específico que me fez persistir tanto depois até conseugir
+        ter vc dnv pra mim. Foi engraçado pq vc ficou com muita vergonha e correu pra dentro do carro depois de falar isso, eu nem consegui te responder. Esse foi um dos melhores momentos da minha vida inteira, falando sério.
+      </p><p>Obrigado por se apaixonar por mim de novo.</p>
+    <script>
+    const btn = document.getElementById("surpriseBtn");
+    const msg = document.getElementById("message");
+
+    function createHeart() {
+      const heart = document.createElement("div");
+      heart.classList.add("heart");
+      heart.textContent = "❤️";
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.bottom = "0";
+      heart.style.animationDuration = (Math.random() * 3 + 2) + "s";
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 5000);
+    }
+
+    function startHearts() {
+      setInterval(createHeart, 400);
+    }
+
+    btn.addEventListener("click", () => {
+      msg.classList.remove("hidden");
+      startHearts();
+    });
+  </script>

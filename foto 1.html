@@ -1,0 +1,61 @@
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>o início</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="namorada.css">
+</head>
+        
+<body class="bg-gradient-to-br from-red-600 to-white-700 text-white min-h-screen flex flex-col">
+      <video autoplay muted loop id="video-bg">
+        <source src="video.mp4" type="video/mp4"/>
+      </video>
+
+      <div id="porra" class="float">
+       <center><div class="card-foto">
+      <button id="surpriseBtn"><img src="fotos/foto 3.2.jpg" class="w-60 h-100 object-cover" />
+        </button>
+    </div></center> 
+    </div>
+
+
+    <center><div id="message" class="mt-8 hidden text-center text-xl max-w-7xl italic font-bold bg-white text-red-800 p-6 rounded-xl shadow-lg">
+      <p>Quando a gente se conheçeu.</p>
+      <p>Meu Deus, n sei como começar a falar disso.</p>
+      <p>Esse dia, ai ai. Esse dia foi muito doido, ele foi muito foda e legal, mas ao mesmo tempo um arrependimento terrível sobre ele. Mas de uma coisa eu não me arrependo, e nunca vou me arrepender, você.
+      Nesse dia eu te conheci, foi o dia q a gente teve mais contato no começo da nossa relação. Já conversamos várias vezes sobre o quão bizarro foi a gente interagindo ao decorrer do dia, vc deitada no meu peito
+      sendo que a gente tava quase que literalmente se conhecendo ali nql momento, eu acho que isso é mais mágico do que bizarro, pq foi meio q a primeira vista que a gente se conectou, desde o primeiro momento desse dia
+      e ao decorrer de todos os outros momentos, eu sentia cada vez mais que eu tava me apaixonando por vc, e que estávamos construíndo uma confecção absurda ali, que duraria por muito tempo.</p>
+      Foi papo de amor mesmo c pa, e eu fui sortudo à beça por vc ter ido tão na minha, ter deitado no meu peito do nada e tal. Teve tbm o negócio do Davi virar pra gente e falar que a gente formava um casal bonito (e nenhum de nós dois 
+      discordou, pq era justamente o que queríamos em segredo), momentos depois do Tato ter sumido.<p>A gente se fudeu tanto por esse dia ter acontecido, mas valeu muito a pena, nos aproximamos muito, e foi isso que nos fez
+        estarmos juntos hoje aq, eu tava de castigo, mas pegava o celular escondido pra conversar com vc e dps apagava as mensagens pra minha mãe n ver, eu fiz uns grandes sacríficios só pra poder falar com vc nessa época, e cara, que bom.
+        Agora eu to aqui, me empenhando horrores pra fazer um SITE dedicado à vc pq eu te amo muito e quero te dar tudo o que vc merece por fazer todos os meus dias melhores, obrigado.
+        <p>Obrigado por não desistir de mim de começo.</p>
+
+      </p></p> 
+    <script>
+    const btn = document.getElementById("surpriseBtn");
+    const msg = document.getElementById("message");
+
+    function createHeart() {
+      const heart = document.createElement("div");
+      heart.classList.add("heart");
+      heart.textContent = "❤️";
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.bottom = "0";
+      heart.style.animationDuration = (Math.random() * 3 + 2) + "s";
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 5000);
+    }
+
+    function startHearts() {
+      setInterval(createHeart, 400);
+    }
+
+    btn.addEventListener("click", () => {
+      msg.classList.remove("hidden");
+      startHearts();
+    });
+  </script>
+  </div>

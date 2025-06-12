@@ -1,0 +1,53 @@
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>nois na escola</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="namorada.css">
+</head>
+        
+<body class="bg-gradient-to-br from-red-600 to-white-700 text-white min-h-screen flex flex-col">
+      <video autoplay muted loop id="video-bg">
+        <source src="video.mp4" type="video/mp4"/>
+      </video>
+
+      <div id="porra" class="float">
+       <center><div class="card-foto">
+      <button id="surpriseBtn"><img src="foto 4.2.jpg" class="w-60 h-100 object-cover" />
+        </button>
+    </div></center> 
+    </div>
+
+
+    <center><div id="message" class="mt-8 hidden text-center text-xl max-w-7xl italic font-bold bg-white text-red-800 p-6 rounded-xl shadow-lg">
+     <p>Eu adoro ser da mesma sala que você, todo dia a gente pode fazer um monte de coisas juntos, a gente tira foto e põe o papo em dia.</p>
+<p>Eu amo me arrumar todo especialmente pra ser bonito aos seus olhos, muitas vezes eu fico muito ansioso pra vc ver a roupa que eu escolhi e ouvir oq vc tem a dizer sobre ela (mesmo q as vezes vc não fala nada). Acredito que eu tenha ficado mais estiloso por influência sua, mas não por vc falar como eu deveria me vestir, mas pq eu sempre tento me vestir de uma forma que te impressione, sla.</p>
+<p>Eu só sigo firme na escola pq eu sei que vou te ver e vamos fazer muitas coisas legais na sala, ou que podemos fazer, algumas vezes eu fico pensando muito milimetricamente sobre o que vamos fazer no outro dia na escola, salvo coisa pra assistirmos, ou pra te mostrar, guardo assuntos pra falar cntg na escola.
+Estarmos juntos na mesma sala definitivamente foi um fator crucial pra gente dar tão certo em tudo, tbm temos mais tempo pra discutir e resolver problemas, não precisamos estar em casa pra conversar por mensagem, podemos conversar pessoalmente na escola, o que as vezes é melhor.
+Criamos piadas internas, zuamo de umas pessoas, é muito foda, todo dia na escola é legal (o fato de ter vc cmg, pq o resto......), amo o fato de que podemos compartilhar muitos momentos a mais estando na mesma sala, é muito hype, te amo.</p>
+<p>Obrigado por fazer todos os meus dias na escola muito melhores do que seriam. E obrigado por me fazer ser a melhor versão de mim todos os dias.</p>
+    <script>
+    const btn = document.getElementById("surpriseBtn");
+    const msg = document.getElementById("message");
+
+    function createHeart() {
+      const heart = document.createElement("div");
+      heart.classList.add("heart");
+      heart.textContent = "❤️";
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.bottom = "0";
+      heart.style.animationDuration = (Math.random() * 3 + 2) + "s";
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 5000);
+    }
+
+    function startHearts() {
+      setInterval(createHeart, 400);
+    }
+
+    btn.addEventListener("click", () => {
+      msg.classList.remove("hidden");
+      startHearts();
+    });
+  </script>

@@ -1,0 +1,53 @@
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>dia de shopping na chuva
+</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="namorada.css">
+</head>
+        
+<body class="bg-gradient-to-br from-red-600 to-white-700 text-white min-h-screen flex flex-col">
+      <video autoplay muted loop id="video-bg">
+        <source src="video.mp4" type="video/mp4"/>
+      </video>
+
+      <div id="porra" class="float">
+       <center><div class="card-foto">
+      <button id="surpriseBtn"><video autoplay muted loop src="fotos/video 2.1.mp4" class="w-60 h-100 object-cover" />
+        </button>
+    </div></center> 
+    </div>
+
+
+    <center><div id="message" class="mt-8 hidden text-center text-xl max-w-7xl italic font-bold bg-white text-red-800 p-6 rounded-xl shadow-lg">
+      <p>Eu gosto muito desse dia.</p>
+Foi um dia que tava dando tudo errado até eu chegar na sua casa, íamos no shopping, ja dps do curso eu fui direto pra sua casa, mas começou a chover horrores, oq me complicou muito, me encharquei completamente, minha blusa, meu tênis, minha meia, meu short, a única coisa q n encharcou foi a minha camiseta, q era a primeira vez q eu tava usando ela.
+Mas aí vc me deu sua calça, eu botei, e tamo junto, coloquei uma meia sua também e fomos pro shopping nessa situação mesmo. Íamos comer o mesmo lanche, só que no bk e no mc pra comparar, mas aí o preço era muito alto pra mim, então eu comprei o fantástico whopper furioso, meu deus, que hambúrguer delcioso, perfeito. Aí a gente foi comendo no ônibus enquanto ia pra escola, mentimos pro lelo que n íamos pra escola e tal.
+Esse dia foi muito bom pq mesmo quando ta tudo uma merda e dando errado, passar um tempo especialmente com vc ajeita tudinho e fica legal, por isso eu gosto tanto desse dia.
+<p>Obrigado por fazer meus dias chuvosos serem iluminados com a sua luz.
+</p>    <script>
+    const btn = document.getElementById("surpriseBtn");
+    const msg = document.getElementById("message");
+
+    function createHeart() {
+      const heart = document.createElement("div");
+      heart.classList.add("heart");
+      heart.textContent = "❤️";
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.bottom = "0";
+      heart.style.animationDuration = (Math.random() * 3 + 2) + "s";
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 5000);
+    }
+
+    function startHearts() {
+      setInterval(createHeart, 400);
+    }
+
+    btn.addEventListener("click", () => {
+      msg.classList.remove("hidden");
+      startHearts();
+    });
+  </script>

@@ -1,0 +1,110 @@
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>amor namorada linda</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="namorada.css">
+</head>
+        
+<body class="bg-gradient-to-br from-red-600 to-white-700 text-white min-h-screen flex flex-col">
+      <video autoplay muted loop id="video-bg">
+        <source src="video.mp4" type="video/mp4"/>
+      </video>
+      
+      <header class="text-center py-6">
+        <h1 class="text-4x1 font-bold">💫Eu te amo, minha estrelinha.✨</h1>
+        <p class="text-lg text-white-200 mt-2">Obrigado por tudo, amor!</p>
+      </header>
+
+       <main class="p-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-4xl mx-auto">
+    <div class="card-foto">
+      <a href="video 1.html"><video autoplay muted loop src="fotos/video 1.mp4" class="w-full h-64 object-cover" /></a>
+    </div>
+    <div class="card-foto">
+      <a href="foto 1.html"><img src="fotos/foto 3.jpg" class="w-full h-64 object-cover" /></a>
+    </div>
+    <div class="card-foto">
+      <a href="foto 2.html"><img src="fotos/foto 8.jpg" class="w-full h-64 object-cover" /></a>
+    </div>
+    <div class="card-foto">
+      <a href="video 2.html"><video autoplay muted loop src="fotos/video 4.mp4" class="w-full h-64 object-cover" /></a>
+    </div>
+    <div class="card-foto">
+      <a href="foto 3.html"><img src="fotos/foto 1.jpg" class="w-full h-64 object-cover" /></a>
+    </div>
+    <div class="card-foto">
+      <a href="foto 4.html"><img src="fotos/foto 5.jpg" class="w-full h-64 object-cover" /></a>
+    </div>
+    <div class="card-foto">
+      <a href="foto 5.html"><img src="fotos/foto 4.jpg" class="w-full h-64 object-cover" /></a>
+    </div>
+    <div class="card-foto">
+      <a href="foto 6.html"><img src="fotos/foto 7.jpg" class="w-full h-64 object-cover" /></a>
+    </div>
+    <div class="card-foto">
+      <a href="video 3.html"><video autoplay muted loop src="fotos/video 3.mp4" class="w-full h-64 object-cover" /></a>
+    </div>
+    <div class="card-foto">
+      <a href="foto 7.html"><img src="fotos/foto 2.jpg" class="w-full h-64 object-cover" /></a>
+    </div>
+    <div class="card-foto">
+      <a href="foto 8.html"><img src="fotos/foto 6.jpg"  class="w-full h-64 object-cover" /></a>
+    </div>
+    <div class="card-foto">
+      <a href="video 4.html"><video autoplay muted loop src="fotos/video 2.mp4" class="w-full h-64 object-cover" /></a>
+    </div>
+    
+  </main>
+   <div class="flex flex-col items-center mt-10">
+    <button id="surpriseBtn" class="bg-gradient-to-r from-red-500 to-pink-500 hover:scale-105 text-white font-bold py-3 px-6 rounded-full shadow-lg transition duration-300">
+      🤍 Se ja tiver lido tudo, clica aqui :P ✨
+    </button>
+
+    <div class="mt-6 animate-bounce text-5xl">🤍</div>
+    <p class="text-white mt-2 italic">Vc definitivamente é muito hype, sem vc minha vida seria menos hype. Feliz dia dos namorados!✨🤍</p>
+
+    <div id="message" class="mt-8 hidden text-center text-xl max-w-7xl bg-white text-red-800 p-6 rounded-xl shadow-lg">
+      eu fiz esse site pra de presentear com algo que seja significativo, legal e daora (e q eu tenha familiaridade tbm, pq mol pregs). Espero que vc tenha gostado
+      dessa parada aqui q eu fiz pra vc pq eu fiz de todo meu coração e com todo o carinho. Eu to até com dificuldade de encontrar palavras pra conseugir descrever
+      e escrever aqui. Mas no geral, vc é literalmente o que tem de mais importante na minha vida, eu te amo demais e agradeço por vc existir e sempre estar comigo.<br>
+      Eu sei que palavras n são suficiente para expressar tudo que eu realmente sinto dentro desse meu coraçãozinho maluco, mas n tem muito o que eu consiga fazer num
+      site além de usar palavras ☠️ ent vai ter que servir. Eu te amo, muitão muitão. ✨🤍
+    </div>
+  </div>
+  <div class="flex flex-col items-center mt-10">
+    <a href="botão surpresa.html"><button id="surpriseBtn" class="bg-gradient-to-r from-red-500 to-pink-500 hover:scale-105 text-white font-bold py-3 px-6 rounded-full shadow-lg transition duration-300">
+      uma últma mensagem
+    </button></a>
+  </div>
+
+
+  
+  <script>
+    const btn = document.getElementById("surpriseBtn");
+    const msg = document.getElementById("message");
+
+    function createHeart() {
+      const heart = document.createElement("div");
+      heart.classList.add("heart");
+      heart.textContent = "❤️";
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.bottom = "0";
+      heart.style.animationDuration = (Math.random() * 3 + 2) + "s";
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 5000);
+    }
+
+    function startHearts() {
+      setInterval(createHeart, 400);
+    }
+
+    btn.addEventListener("click", () => {
+      msg.classList.remove("hidden");
+      startHearts();
+    });
+  </script>
+  
+
+</body>
+</html>

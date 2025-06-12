@@ -1,0 +1,52 @@
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>piercing</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="namorada.css">
+</head>
+        
+<body class="bg-gradient-to-br from-red-600 to-white-700 text-white min-h-screen flex flex-col">
+      <video autoplay muted loop id="video-bg">
+        <source src="video.mp4" type="video/mp4"/>
+      </video>
+
+      <div id="porra" class="float">
+       <center><div class="card-foto">
+      <button id="surpriseBtn"><img src="fotos/foto 7.2.jpg" class="w-60 h-100 object-cover" />
+        </button>
+    </div></center> 
+    </div>
+
+
+    <center><div id="message" class="mt-8 hidden text-center text-xl max-w-7xl italic font-bold text-purple-800 p-6 rounded-xl shadow-lg">
+      <p>A premissa desse dia era muito foda, a gente foi no shopping primordialmente pra vc colocar o piercing, mas no fim n deu certo.</p>
+<p>As fotos que a gente tirou quando estavamos na riachuelo são umas das minhas favoritas, a gente tem que comprar aquele chapéu q vc gostou. Por mais que eu n aguente mais ir no shopping Itaquera, sempre é muito foda ir pra lá com vc, a gente fica reclamando desse fato do shopping já estar chato, então fica legal.
+Foi triste que não conseguimos colocar seu piercing, mas pelo menos vc voltou cmg pra casa da minha vó dps e assistimos Ainda Estou Aqui e comemos linguiça e batata, delícia dms. Fico imaginando se a gente tivesse encontrado a dorys e a luma igual vc qria, poderia não ser tão foda, eu acho que foi muito mais legal a gente ter ido pra casa da minha vó, aquele filme é muito muito foda, e sempre é bom comer batata frite né, saudades de dias assim, af. Mesmo que a gente n tenha saído com as meninas, eu lembro que a gente conversou com elas pq elas te ligaram enquanto elas tavam na praça Brasil lá, foi daora.</p>
+Agora a gente tem que repetir essas noites de filmes mais vezes, mas com a saga de invocação do mal, urgentemente, batatinha delícia, filme delícia, tudo perfeito, the last of us um pouquinho antes, sempre bom.
+<p>Obrigado por sempre topar um plano improvisado na hora pra não perdermos o dia juntos.</p>
+    <script>
+    const btn = document.getElementById("surpriseBtn");
+    const msg = document.getElementById("message");
+
+    function createHeart() {
+      const heart = document.createElement("div");
+      heart.classList.add("heart");
+      heart.textContent = "❤️";
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.bottom = "0";
+      heart.style.animationDuration = (Math.random() * 3 + 2) + "s";
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 5000);
+    }
+
+    function startHearts() {
+      setInterval(createHeart, 400);
+    }
+
+    btn.addEventListener("click", () => {
+      msg.classList.remove("hidden");
+      startHearts();
+    });
+  </script>

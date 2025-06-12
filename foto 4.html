@@ -1,0 +1,54 @@
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>o rodízio de pizza</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="namorada.css">
+</head>
+        
+<body class="bg-gradient-to-br from-red-600 to-white-700 text-white min-h-screen flex flex-col">
+      <video autoplay muted loop id="video-bg">
+        <source src="video.mp4" type="video/mp4"/>
+      </video>
+
+      <div id="porra" class="float">
+       <center><div class="card-foto">
+      <button id="surpriseBtn"><img src="fotos/foto 5.2.jpg" class="w-60 h-100 object-cover" />
+        </button>
+    </div></center> 
+    </div>
+
+
+    <center><div id="message" class="mt-8 hidden text-center text-xl max-w-7xl italic font-bold bg-white text-red-800 p-6 rounded-xl shadow-lg">
+      <p>É bizarro lembrar q esse dia começou com a gente bebendo antes da escola e estando muito doido la e acabou com a gente indo em um rodízio de pizza com a minha mãe.</p>
+      <p>Eu adorava fazer isso de beber antes da escola com voce, era engraçado, rendeu boas fotos e momentos. Eu lembro que foi nesse dia q eu provei a pizza q c gosta q eu nunca tinha
+        visto na minha vida, calabresa com catupiry, e foi muito foda. Esse dia foi MUITO bom, por mais que n tenha acontedcido muitas coisas mirabolantes, as coisas que rolaram ja foram boas
+        pra caralho, a gente de casalzinho la no rodizio (aliás, esse dia foi um dia antes de eu te pedir em namoro), a branca de neve e oso sete anões drogados lá.
+      </p>
+      <p>Foi muito bom como tudo nesse dia deu certo, foi um dia muito bom e meio atípico por ter dado muito certo, inclusive no dia depois eu te pedi em anmoro e vc aceitou, então deu tudo certo tbm.</p>
+      <p>Obrigado por me fazer gostar de sair com a minha familia</p>
+    <script>
+    const btn = document.getElementById("surpriseBtn");
+    const msg = document.getElementById("message");
+
+    function createHeart() {
+      const heart = document.createElement("div");
+      heart.classList.add("heart");
+      heart.textContent = "❤️";
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.bottom = "0";
+      heart.style.animationDuration = (Math.random() * 3 + 2) + "s";
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 5000);
+    }
+
+    function startHearts() {
+      setInterval(createHeart, 400);
+    }
+
+    btn.addEventListener("click", () => {
+      msg.classList.remove("hidden");
+      startHearts();
+    });
+  </script>
